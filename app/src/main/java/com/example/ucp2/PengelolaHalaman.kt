@@ -53,6 +53,9 @@ fun ContactApp(
                                       },
                 )
             }
+            composable(route = PengelolaHalaman.Summary.name) {
+                HalamanTiga(FormUIState = uiState, onCancelButtonClicked = { navController.popBackStack(PengelolaHalaman.Formulir.name,inclusive = false) })
+            }
         }
     }
 }
