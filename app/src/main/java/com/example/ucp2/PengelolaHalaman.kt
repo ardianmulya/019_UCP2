@@ -48,7 +48,9 @@ fun ContactApp(
                     dosenpembimbing2 = dosen1.map { id -> context.resources.getString(id) },
                     onSelectionChanged1 = {viewModel.setDosenPem1(it)},
                     onSelectionChanged2 = {viewModel.setDosenPem2(it)},
-                    onSubmitClicked = ,
+                    onSubmitClicked = {viewModel.setData(it)
+                        navController.navigate(PengelolaHalaman.Summary.name)
+                                      },
                 )
             }
         }

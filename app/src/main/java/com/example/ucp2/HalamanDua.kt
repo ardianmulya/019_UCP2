@@ -58,7 +58,7 @@ fun HalamanDua(
     var dospem2 by remember {
         mutableStateOf("")
     }
-    var listData : MutableList<String> = mutableListOf(nama,nim,minat,judul,dospem1,dospem2)
+    var listData : MutableList<String> = mutableListOf(nama,nim,minat,judul)
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center
