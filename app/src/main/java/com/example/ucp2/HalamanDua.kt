@@ -117,48 +117,52 @@ fun HalamanDua(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ){
-                        dosenpembimbing1.forEach { item ->
-                            Row(
-                                modifier = Modifier.selectable(
-                                    selected = dospem1 == item,
-                                    onClick = {
+                        Column {
+                            dosenpembimbing1.forEach { item ->
+                                Row(
+                                    modifier = Modifier.selectable(
+                                        selected = dospem1 == item,
+                                        onClick = {
+                                            dospem1 = item
+                                            onSelectionChanged1(item)
+                                        }
+                                    ),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(selected = dospem1 == item, onClick = {
                                         dospem1 = item
                                         onSelectionChanged1(item)
                                     }
-                                ),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                RadioButton(selected = dospem1 == item, onClick = {
-                                   dospem1 = item
-                                    onSelectionChanged1(item)
+                                    )
+                                    Text(item)
                                 }
-                                )
-                                Text(item)
                             }
                         }
-                        dosenpembimbing2.forEach { item ->
-                            Row(
-                                modifier = Modifier.selectable(
-                                    selected = dospem2 == item,
-                                    onClick = {
+                        Column {
+                            dosenpembimbing2.forEach { item ->
+                                Row(
+                                    modifier = Modifier.selectable(
+                                        selected = dospem2 == item,
+                                        onClick = {
+                                            dospem2 = item
+                                            onSelectionChanged2(item)
+                                        }
+                                    ),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(selected = dospem2 == item, onClick = {
                                         dospem2 = item
                                         onSelectionChanged2(item)
                                     }
-                                ),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                RadioButton(selected = dospem2 == item, onClick = {
-                                    dospem2 = item
-                                    onSelectionChanged2(item)
+                                    )
+                                    Text(item)
                                 }
-                                )
-                                Text(item)
                             }
                         }
                     }
-                }
-                Button(onClick = { onSubmitClicked(listData) }) {
-                    Text(stringResource(id = R.string.btn_submit))
+                    Button(onClick = { onSubmitClicked(listData) }) {
+                        Text(stringResource(id = R.string.btn_submit))
+                    }
                 }
             }
         }
