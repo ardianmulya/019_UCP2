@@ -23,7 +23,7 @@ enum class PengelolaHalaman {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ContactApp(
+fun FormulirApp(
     viewModel: FormViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
