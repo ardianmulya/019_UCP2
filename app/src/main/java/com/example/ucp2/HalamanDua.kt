@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -28,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -89,12 +91,13 @@ fun HalamanDua(
                     OutlinedTextField(
                         value = nama,
                         onValueChange = { nama = it },
-                        label = { Text(stringResource(id = R.string.nama)) }
+                        label = { Text(stringResource(id = R.string.nama)) },
                     )
                     OutlinedTextField(
                         value = nim,
                         onValueChange = { nim = it },
-                        label = { Text(stringResource(id = R.string.nim)) }
+                        label = { Text(stringResource(id = R.string.nim)) },
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     )
                     OutlinedTextField(
                         value = minat,
