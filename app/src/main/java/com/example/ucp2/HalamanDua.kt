@@ -163,7 +163,10 @@ fun HalamanDua(
                             }
                         }
                     }
-                    Button(onClick = { onSubmitClicked(listData) }) {
+                    Button(onClick = { onSubmitClicked(listData) },
+                        enabled = nama.isNotEmpty() && nim.isNotEmpty() && minat.isNotEmpty() && judul.isNotEmpty() && dospem1.isNotEmpty() && dospem2.isNotEmpty(),
+
+                        ) {
                         Text(stringResource(id = R.string.btn_submit))
                     }
                 }

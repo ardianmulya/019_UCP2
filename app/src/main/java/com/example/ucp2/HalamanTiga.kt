@@ -57,6 +57,7 @@ fun HalamanTiga(
                         Text(text = item.second.toString(), fontWeight = FontWeight.Bold)
                     }
                     Divider(thickness = 1.dp)
+                    Spacer(modifier = Modifier.padding(10.dp))
                 }
             }
             Row(
